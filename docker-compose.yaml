@@ -1,0 +1,14 @@
+services:
+  taobao-bill-analysis:
+    image: taobao-bill-analysis
+    container_name: taobao-bill-analysis
+    networks:
+      - taobao_bill_analysis
+    ports:
+      - 9926:80
+    environment:
+      TZ: 'Asia/Shanghai'
+    restart: always
+networks:
+  taobao_bill_analysis:
+    driver: bridge
